@@ -1,0 +1,6 @@
+pytest==3.8.0
+pep8==1.7.1
+
+flask==1.0.2
+gunicorn==19.9.0
+requests==2.21.0
