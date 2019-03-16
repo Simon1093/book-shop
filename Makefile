@@ -4,13 +4,16 @@ include ./deploy/.env
 
 ENV=local
 
+use_secrets:
+	cp ./secrets/$(ENV)/.env ./deploy/
+
 down:
 	docker-compose down
 
 build:
 	docker-compose build
 
-up: down build
+up: down build use_secrets
 	docker-compose up -d
 
 unit: up
