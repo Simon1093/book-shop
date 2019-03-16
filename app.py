@@ -7,8 +7,8 @@ app = Flask('pastebin')
 
 
 @app.route('/')
-def hello():
-    return render_template('hello.html', hello='Hello from Flask')
+def main():
+    return render_template('main.html')
 
 
 @app.route('/secret')
